@@ -11,7 +11,14 @@ int main(int argc, char *argv[])
     {
         a[x]=atof(argv[m]);
     }
-    
+       if(argv[1] == EOF)
+    {
+        printf("The program needs at least one integer parameter to run\n");
+    }
+    else if(argv[2] == 'what')
+    {
+        printf("The parameter has to be an integer format\n");
+    }
     int i ;
     int min=a[0];
  
@@ -22,17 +29,5 @@ int main(int argc, char *argv[])
             min=a[i];
         }
     }
- 
-    if(argv[1] == EOF)
-    {
-        printf("The program needs at least one integer parameter to run\n");
+             printf("Min parameter is %d\n",min);
     }
-    else if(argv[2] == 'what')
-    {
-        printf("The parameter has to be an integer format\n");
-    }
-    else
-    {
-        printf("Min parameter is %d\n",min);
-    }
-}
